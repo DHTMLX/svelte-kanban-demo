@@ -11,6 +11,8 @@ yarn start
 
 ## Useful links
 
+- **[Online demo](https://replit.com/@dhtmlx/dhtmlx-kanban-with-svelte)**
+- [More demos about the DHTMLX Event Calendar functionality](https://snippet.dhtmlx.com/807qbp9v?tag=kanban&mode=wide)
 - [Technical support ](https://forum.dhtmlx.com/c/kanban)
 - [Online  documentation](https://docs.dhtmlx.com/kanban/)
 
