@@ -9,12 +9,10 @@
     let container;
     onMount(() => {
         new Kanban(container, {
-            columns, cards
+            columns, 
+            cards
         })
     });
 </script>
 
-<div bind:this={container} style="width: 100%; height: 100%;">
-
-</div>
-
+<div bind:this={container} style="width: 100%; height: 100%;"></div>
