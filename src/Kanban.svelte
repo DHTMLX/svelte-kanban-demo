@@ -2,6 +2,7 @@
     import "@dhx/trial-kanban/dist/kanban.css";
     import { onMount } from "svelte";
     import { Kanban } from "@dhx/trial-kanban";
+    import "@dhx/trial-kanban/dist/kanban.css";
     
     export let columns;
     export let cards;
