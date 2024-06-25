@@ -1,19 +1,34 @@
 <script>
-    import "@dhx/trial-kanban/dist/kanban.css";
-    import { onMount } from "svelte";
-    import { Kanban } from "@dhx/trial-kanban";
+    import { onMount, onDestroy } from "svelte";
+    import { Kanban, Toolbar } from "@dhx/trial-kanban";
     import "@dhx/trial-kanban/dist/kanban.css";
     
     export let columns;
     export let cards;
 
-    let container;
+    let toolbar_container, kanban_container;
+    let kanban, toolbar;
+
     onMount(() => {
-        new Kanban(container, {
+        kanban = new Kanban(kanban_container, {
             columns, 
-            cards
+            cards,
+            // other configuration properties
         })
+
+        toolbar = new Toolbar(toolbar_container, {
+            api: kanban.api,
+            // other configuration properties
+        })
+    });
+
+    onDestroy(() => {
+        kanban.destructor();
+        toolbar.destructor();
     });
 </script>
 
-<div bind:this={container} style="width: 100%; height: 100%;"></div>
+<div class="component_container">
+    <div bind:this={toolbar_container}></div>
+    <div bind:this={kanban_container} style="height: calc(100% - 56px);"></div>
+</div>
