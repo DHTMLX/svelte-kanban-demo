@@ -2,7 +2,7 @@
   import Kanban from "./Kanban.svelte";
   import { getData } from "./data.js";
   
-  const { columns, cards } = getData();
+  const { cards, columns, rows, cardShape } = getData();
 </script>
 
-<Kanban {cards} {columns} />
+<Kanban {cards} {columns} {rows} {cardShape} />
